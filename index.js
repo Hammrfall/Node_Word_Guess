@@ -1,7 +1,8 @@
 var randomWords = require('random-words');
-var inquirer = require('inquirer')
-var word = require("./word")
-var chalk = require("chalk");
+var inquirer = require('inquirer');
+var chalk = require('chalk');
+var word = require("./word");
+
 var guessWord;
 var MaxGuesses = 12;
 var GuessesLeft = MaxGuesses;
@@ -73,10 +74,10 @@ function getIncorrectGuesses() {
     return returnString;
 }
 
-function alreadyGuessed(letter){
+function alreadyGuessed(letter) {
     var returnAnswer = false;
-    for (var i = 0; i <incorrectGuesses.length; i++ ){
-        if (incorrectGuesses[i] == letter){
+    for (var i = 0; i < incorrectGuesses.length; i++) {
+        if (incorrectGuesses[i] == letter) {
             returnAnswer = true;
         }
     }
